@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InvoiceGeneratorApp
 {
-    public interface IDocument
+    public interface IDocument1
     {
         DocumentMetadata GetMetadata();
         DocumentMetadata GetSettings();

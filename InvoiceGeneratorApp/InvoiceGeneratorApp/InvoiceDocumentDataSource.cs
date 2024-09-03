@@ -1,10 +1,5 @@
 ﻿using InvoiceGeneratorApp.Models;
 using QuestPDF.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InvoiceGeneratorApp
 {
@@ -15,7 +10,7 @@ namespace InvoiceGeneratorApp
         public static InvoiceModel GetInvoiceDetails()
         {
             var items = Enumerable
-                        .Range(1, 8)
+                        .Range(1, 25)
                         .Select(i => GenerateRandomOrderItem())
                         .ToList();
 
@@ -52,7 +47,7 @@ namespace InvoiceGeneratorApp
             {
                 Name = Placeholders.Label(),
                 Price = (decimal)Math.Round(Random.NextDouble() * 100, 2),
-                Quantity = Random.Next(1, 20)
+                Quantity = Random.Next(1, 10)
             };
         }
     }
