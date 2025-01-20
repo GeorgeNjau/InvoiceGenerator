@@ -27,7 +27,7 @@ namespace InvoiceGeneratorApp
                 page.Footer().AlignCenter().Text(x =>
                 {
                     x.CurrentPageNumber();
-                    x.Span(" / ");
+                    x.Span(" of ");
                     x.TotalPages();
                 });
 
@@ -62,7 +62,7 @@ namespace InvoiceGeneratorApp
 
         void ComposeTable(IContainer container)
         {
-            var headerStyle = TextStyle.Default.SemiBold();
+            var headerStyle = TextStyle.Default.SemiBold().ExtraBlack();
 
             container.Table(table =>
             {

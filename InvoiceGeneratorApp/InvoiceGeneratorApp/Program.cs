@@ -14,6 +14,7 @@ internal class Program
         var document = new InvoiceDocument(model);
 
         document.GeneratePdf(@"D:\MySampleFile.pdf");
-        
+        //Process.Start(@"D:\MySampleFile.pdf");
+        //document.ShowInPreviewer();
     }
 }
